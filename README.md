@@ -1,38 +1,19 @@
 WHAT IS THIS?
 =============
 
-Linux Kernel source code for the device bq Aquaris 5HD
+Linux Kernel source code for the device XoloQ1000/SymphonyW140
 
 BUILD INSTRUCTIONS?
 ===================
 
-Specific sources are separated by branches and each version is tagged with it's corresponding number. First, you should
-clone the project:
-
-        $ git clone git@github.com:bq/aquaris-5HD.git
-
-##After it, choose the version you would like to build:
-
-### Version 1.x (Jelly Bean)
-
-
-        $ cd aquaris-5HD/
-        $ git checkout 1.0.3_20140116-1954
+First Download the Source code from here :) By Clicking Download Zip or Clone it :)
 
 Build the kernel:
+Go to the kernel directory and issue these commands: 
+export ARCH=arm
+KBUILD_BUILD_HOST=ZunaidLenovoS405
+export TARGET_BUILD_VARIANT=user
+./makeMtk -t -o=TARGET_BUILD_VARIANT=user eastaeon89_wet_kk n k
 
-        $ cd kernel/
-        $ rm -rf out/
-        $ mkdir out/
-        $ TARGET_PRODUCT=lcsh89_we_jb2 MTK_ROOT_CUSTOM=../mediatek/custom make O=out
+After the kernel is compiled , replace the zimage in the boot.img of the current kernel and flash it up :)
 
-
-### Version 2.x (KitKat)
-
-
-        $ cd aquaris-5HD/
-        $ git checkout 2.0.0_20140911-1054
-
-Build the kernel:
-
-        $ ./makeMtk -t lcsh89_wet_kk n k
